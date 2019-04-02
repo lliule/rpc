@@ -3,6 +3,7 @@ package serialize;
 import java.io.*;
 
 /**
+ * @author leliu
  * DefaultJavaSerialize Create on 2019/4/2
  * java 默认的序列化和反序列化实现
  * 优点：
@@ -13,7 +14,6 @@ import java.io.*;
  *      性能欠佳，序列化后的产生的码流过大，对于引用过深的对象序列化易发生内存OOM异常
  */
 public class DefaultJavaSerialize implements TSerialize{
-	@Override
 	public <T> byte[] serialize(T obj) {
 		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 		try {
@@ -26,7 +26,6 @@ public class DefaultJavaSerialize implements TSerialize{
 		return byteArrayOutputStream.toByteArray();
 	}
 
-	@Override
 	@SuppressWarnings("unchecked")
 	public <T> T deserialize(byte[] data, Class<T> clazz) {
 		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(data);

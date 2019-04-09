@@ -1,7 +1,5 @@
 package register.help;
 
-import com.google.common.collect.Lists;
-
 /**
  * @author leliu
  */

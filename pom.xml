@@ -142,5 +142,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.4</version>
         </dependency>
+        <!--netty-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.8.Final</version>
+        </dependency>
+
     </dependencies>
 </project>

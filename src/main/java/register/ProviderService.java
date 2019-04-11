@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 public class ProviderService {
 	private Class<?> serviceItf;
 	private Object serviceObject;
-	private String serverPort;
+	private int serverPort;
 	private long timeout;
 	private Object serviceProxyObject;
 	private String appKey;

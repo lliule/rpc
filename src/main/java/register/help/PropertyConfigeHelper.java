@@ -11,6 +11,7 @@ public class PropertyConfigeHelper {
 	private static final int zkSessionTimeout = 2000;
 	private static final String zkService = "106.12.204.20";
 	private static final String appName = "leliu";
+	private static final int channelConnectSize = 10;
 
 	public static int getZkConnectionTimeout() {
 		return zkConnectionTimeout;
@@ -31,4 +32,8 @@ public class PropertyConfigeHelper {
 	public static SerializeType getSerializeType() {
 		return SerializeType.queryByType("DefaultJavaSerializer");
 	}
+
+    public static int getChannelConnectSize() {
+        return channelConnectSize;
+    }
 }

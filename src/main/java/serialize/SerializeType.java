@@ -37,4 +37,8 @@ public enum SerializeType {
 		}
 		return null;
 	}
+
+	public String getSerializeType() {
+		return serializeType;
+	}
 }

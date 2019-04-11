@@ -1,5 +1,7 @@
 package register.help;
 
+import serialize.SerializeType;
+
 /**
  * @author leliu
  */
@@ -24,5 +26,9 @@ public class PropertyConfigeHelper {
 
 	public static int getZkSessionTimeout() {
 		return zkSessionTimeout;
+	}
+
+	public static SerializeType getSerializeType() {
+		return SerializeType.queryByType("DefaultJavaSerializer");
 	}
 }

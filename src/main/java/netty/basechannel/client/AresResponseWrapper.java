@@ -10,7 +10,7 @@ import java.util.concurrent.BlockingQueue;
  *
  * @author dana
  */
-public class AresReponseWrapper {
+public class AresResponseWrapper {
 
     /**
      * 存储返回结果的阻塞队列
@@ -39,8 +39,8 @@ public class AresReponseWrapper {
         return false;
     }
 
-    public static AresReponseWrapper of() {
-        return new AresReponseWrapper();
+    public static AresResponseWrapper of() {
+        return new AresResponseWrapper();
     }
 
     public long getResponseTime() {
@@ -49,5 +49,13 @@ public class AresReponseWrapper {
 
     public void setResponseTime(long responseTime) {
         this.responseTime = responseTime;
+    }
+
+    public BlockingQueue<AresResponse> getResponseQueue() {
+        return responseQueue;
+    }
+
+    public void setResponseQueue(BlockingQueue<AresResponse> responseQueue) {
+        this.responseQueue = responseQueue;
     }
 }

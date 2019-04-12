@@ -14,6 +14,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import netty.basechannel.AresResponse;
 import netty.basechannel.NettyDecoderHander;
 import netty.basechannel.NettyEncoderHandler;
+import netty.basechannel.client.NettyClientInvokeHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
@@ -81,7 +82,7 @@ public class NettyChannelPoolFactory {
                 Channel channel = null;
                 while (channel == null) {
                     // 若不存在，则注册新的netty channel
-                    channel = regesterChannel(socketAddress);
+                    channel = registerChannel(socketAddress);
                 }
                 // 计数器，初始化的时候存入阻塞队列的netty channel 个数不超过channelConnectSize
                 realChannelConnetSize ++;

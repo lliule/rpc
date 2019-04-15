@@ -19,4 +19,8 @@ public class ProviderService {
 	private int workerThreads = 10;
 	private String serverIp;
 	private Method serviceMethod;
+
+	public ProviderService copy() {
+		return this;
+	}
 }
